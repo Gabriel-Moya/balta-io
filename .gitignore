@@ -1,0 +1,12 @@
+# Configurações locais do VSCode
+*.vscode
+workspace.code-workspace
+
+# Configs VS and C#
+*.suo
+*.vs/
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
