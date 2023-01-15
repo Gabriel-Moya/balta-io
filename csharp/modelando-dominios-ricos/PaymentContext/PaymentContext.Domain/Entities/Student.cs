@@ -13,6 +13,8 @@ public class Student : Entity
         Document = document;
         Email = email;
         _subscriptions = new List<Subscription>();
+
+        AddNotifications(name, document, email);
     }
 
     public Name Name { get; private set; }
@@ -24,6 +26,7 @@ public class Student : Entity
     public void AddSubscription(Subscription subscription)
     {
         // Se já tiver uma assinatura ativa, cancela
+        
 
         // Cancela todas as outras assinaturas, e coloca esta
         // como principal
