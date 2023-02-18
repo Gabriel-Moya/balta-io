@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Store.Domain.Enums;
 
 namespace Store.Domain.Entities;
 
@@ -38,7 +38,7 @@ public class Order : Entity
 		}
 
 		total += DeliveryFee;
-		total -= Discount != null ? Dicount.Value() : 0;
+		total -= Discount != null ? Discount.Value() : 0;
 
 		return total;
 	}
