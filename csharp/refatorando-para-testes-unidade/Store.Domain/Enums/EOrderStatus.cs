@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Store.Domain.Enums
+namespace Store.Domain.Enums;
 
 public enum EOrderStatus
 {
