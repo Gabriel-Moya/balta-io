@@ -58,7 +58,9 @@ public class OrderTests
     [TestCategory("Domain")]
     public void Dado_um_novo_item_com_quantidade_zero_ou_menor_o_mesmo_nao_deve_ser_adicionado()
     {
-        Assert.Fail();
+        var order = new Order(_customer, 0, null);
+        order.AddItem(_product, 0);
+        Assert.AreEqual(0, order.Items.Count);
     }
 
     [TestMethod]
