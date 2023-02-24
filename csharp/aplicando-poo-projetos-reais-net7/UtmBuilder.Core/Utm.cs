@@ -1,8 +1,10 @@
+using UtmBuilder.Core.ValueObjects;
+
 namespace UtmBuilder.Core;
 
 public class Utm
 {
-    public string Url { get; set; }
+    public Url Url { get; set; }
     public string Source { get; set; }
     public string Medium { get; set; }
     public string Name { get; set; }
