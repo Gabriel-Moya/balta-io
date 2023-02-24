@@ -10,3 +10,6 @@ workspace.code-workspace
 [Dd]ebug/
 [Rr]elease/
 x64/
+
+# Rider
+.idea/
