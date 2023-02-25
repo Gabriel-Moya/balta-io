@@ -4,7 +4,7 @@ namespace UtmBuilder.Core.Tests.ValueObjects;
 public class UrlTests
 {
     [TestMethod]
-    public void X()
+    public void ShouldReturnExceptionWhenUrlIsInvalid()
     {
         
     }
