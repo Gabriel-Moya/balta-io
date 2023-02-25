@@ -7,23 +7,16 @@ namespace UtmBuilder.Core.Tests.ValueObjects;
 public class UrlTests
 {
     [TestMethod]
+    [ExpectedException(typeof(InvalidUrlException))]
     public void ShouldReturnExceptionWhenUrlIsInvalid()
     {
-        try
-        {
-            var url = new Url("banana");
-            Assert.Fail();
-        }
-        catch (InvalidUrlException e)
-        {
-            Assert.IsTrue(true);
-        }
-        
+        new Url("banana");
     }
     
     [TestMethod]
     public void ShouldNotReturnExceptionWhenUrlIsInvalid()
     {
-        Assert.Fail();
+        new Url("https://balta.io");
+        Assert.IsTrue(true);
     }
 }
