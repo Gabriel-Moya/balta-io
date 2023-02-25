@@ -20,6 +20,9 @@ public class Utm
     /// Campaing Details
     /// </summary>
     public Campaign Campaign { get; }
+
+    public static implicit operator string(Utm utm)
+        => utm.ToString();
     
     public override string ToString()
     {
