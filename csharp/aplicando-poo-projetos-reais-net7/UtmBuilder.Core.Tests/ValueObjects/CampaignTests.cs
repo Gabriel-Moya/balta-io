@@ -20,7 +20,7 @@ public class CampaignTests
                 new Campaign(source, medium, name);
                 Assert.Fail();
             }
-            catch (InvalidCampaignException e)
+            catch (InvalidCampaignException)
             {
                 Assert.IsTrue(true);
             }
