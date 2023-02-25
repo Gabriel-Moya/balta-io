@@ -19,4 +19,8 @@
     <Compile Remove="UnitTest1.cs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\UtmBuilder.Core\UtmBuilder.Core.csproj" />
+  </ItemGroup>
+
 </Project>
