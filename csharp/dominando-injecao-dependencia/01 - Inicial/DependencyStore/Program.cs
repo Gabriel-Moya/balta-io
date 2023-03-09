@@ -1,4 +1,5 @@
 using DependencyStore;
+using DependencyStore.Extensions;
 using DependencyStore.Repositories;
 using DependencyStore.Repositories.Contracts;
 using DependencyStore.Services;
@@ -9,10 +10,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 builder.Services.AddSingleton<Configuration>();
-builder.Services.AddScoped<SqlConnection>(x => new SqlConnection(""));
-builder.Services.AddTransient<ICustomerRepository, CustomerRepository>();
-builder.Services.AddTransient<IPromoCodeRepository, PromoCodeRepository>();
-builder.Services.AddTransient<IDeliveryFeeService, DeliveryFeeService>();
+var connStr = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddSqlConnection(connStr);
+builder.Services.AddRepositories();
+builder.Services.AddServices();
 
 var app = builder.Build();
 
