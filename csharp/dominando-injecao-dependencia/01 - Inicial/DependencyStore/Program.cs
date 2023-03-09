@@ -1,10 +1,5 @@
 using DependencyStore;
 using DependencyStore.Extensions;
-using DependencyStore.Repositories;
-using DependencyStore.Repositories.Contracts;
-using DependencyStore.Services;
-using DependencyStore.Services.Contracts;
-using Microsoft.Data.SqlClient;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
