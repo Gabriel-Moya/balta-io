@@ -1,6 +1,7 @@
 ﻿@page
 @using System.Globalization;
 @model MyRazorApp.Pages.IndexModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 <!DOCTYPE html>
 
@@ -9,17 +10,8 @@
     <title></title>
 </head>
 <body>
-    <ul>
-        <li>
-            <a href="~/">Home</a>
-        </li>
-        <li>
-            <a href="~/about">Sobre</a>
-        </li>
-        <li>
-            <a href="~/login">Login</a>
-        </li>
-    </ul>
+    <partial name="Shared/NavMenuPartial" />
+
     <h1>Categorias</h1>
     <div>
         <table>
