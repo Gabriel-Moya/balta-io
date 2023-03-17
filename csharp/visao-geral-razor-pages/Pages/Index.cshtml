@@ -1,4 +1,21 @@
 ﻿@page
 @model MyRazorApp.Pages.IndexModel
+
 @{
 }
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div>
+        @for(var i = 0; i <= 10; i++)
+        {
+            <p>Item @i</p>
+        }
+    </div>
+</body>
+</html>
