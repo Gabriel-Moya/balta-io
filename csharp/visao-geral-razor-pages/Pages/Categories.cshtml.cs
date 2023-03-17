@@ -6,12 +6,18 @@ namespace MyRazorApp.Pages
     {
         public List<CategoryList> CategoryList { get; set; } = new();
 
-        public void OnGet()
+        public void OnGet(int skip, int take)
         {
-            for (int i = 0; i <= 100; i++)
+            var temp = new List<CategoryList>();
+            for (int i = 0; i <= 1787; i++)
             {
-                CategoryList.Add(new CategoryList(i, $"Categoria {i}", i * 18.95M));
+                temp.Add(new CategoryList(i, $"Categoria {i}", i * 18.95M));
             }
+
+            CategoryList = temp
+                .Skip(skip)
+                .Take(take)
+                .ToList();
         }
     }
 }
