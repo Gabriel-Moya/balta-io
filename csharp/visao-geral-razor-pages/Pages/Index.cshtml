@@ -1,4 +1,5 @@
 ﻿@page
+@using System.Globalization;
 @model MyRazorApp.Pages.IndexModel
 
 <!DOCTYPE html>
@@ -23,7 +24,7 @@
                     <tr>
                         <td>@category.Id</td>
                         <td>@category.Title</td>
-                        <td>@category.Price</td>
+                        <td>@category.Price.ToString("C", new CultureInfo("pt-BR"))</td>
                     </tr>
                 }
             </tbody>
