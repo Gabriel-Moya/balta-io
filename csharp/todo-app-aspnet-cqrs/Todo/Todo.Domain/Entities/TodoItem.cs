@@ -1,26 +1,30 @@
-﻿namespace Todo.Domain.Entities;
+﻿using System;
 
-public class TodoItem : Entity
+namespace Todo.Domain.Entities
 {
-    public TodoItem(string title, string user, DateTime date)
+    public class TodoItem : Entity
     {
-        Title = title;
-        User = user;
-        Date = date;
-        Done = false;
+        public TodoItem(string title, string user, DateTime date)
+        {
+            Title = title;
+            User = user;
+            Date = date;
+            Done = false;
+        }
+
+        public string Title { get; private set; }
+        public bool Done { get; private set; }
+        public DateTime Date { get; private set; }
+        public string User { get; private set; }
+
+        public void MarkAsDone()
+            => Done = true;
+
+        public void MarkAsUndone()
+            => Done = false;
+
+        public void UpdateTitle(string title)
+            => Title = title;
     }
 
-    public string Title { get; private set; }
-    public bool Done { get; private set; }
-    public DateTime Date { get; private set; }
-    public string User { get; private set; }
-
-    public void MarkAsDone()
-        => Done = true;
-
-    public void MarkAsUndone()
-        => Done = false;
-
-    public void UpdateTitle(string title)
-        => Title = title;
 }

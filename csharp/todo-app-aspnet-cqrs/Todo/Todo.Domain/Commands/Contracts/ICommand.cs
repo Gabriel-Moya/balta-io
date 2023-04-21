@@ -1,6 +1,7 @@
-﻿namespace Todo.Domain.Commands.Contracts;
-
-public interface ICommand
+﻿namespace Todo.Domain.Commands.Contracts
 {
-    bool Validate();
+    public interface ICommand
+    {
+        bool Validate();
+    }
 }

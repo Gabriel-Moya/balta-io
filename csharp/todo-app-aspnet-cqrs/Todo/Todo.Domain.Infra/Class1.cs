@@ -1,5 +1,7 @@
-﻿namespace Todo.Domain.Infra;
-public class Class1
+﻿namespace Todo.Domain.Infra
 {
+    public class Class1
+    {
 
+    }
 }

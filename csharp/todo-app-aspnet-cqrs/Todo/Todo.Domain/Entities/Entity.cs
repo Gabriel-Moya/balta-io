@@ -1,18 +1,19 @@
 using System;
 
-namespace Todo.Domain.Entities;
-
-public abstract class Entity : IEquatable<Entity>
+namespace Todo.Domain.Entities
 {
-    public Entity()
+    public abstract class Entity : IEquatable<Entity>
     {
-        Id = Guid.NewGuid();
-    }
+        public Entity()
+        {
+            Id = Guid.NewGuid();
+        }
 
-    public Guid Id { get; private set; }
+        public Guid Id { get; private set; }
 
-    public bool Equals(Entity other)
-    {
-        return Id == other.Id;
+        public bool Equals(Entity other)
+        {
+            return Id == other.Id;
+        }
     }
 }

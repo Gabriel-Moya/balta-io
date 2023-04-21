@@ -1,10 +1,13 @@
-namespace Todo.Domain.Tests;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-[TestClass]
-public class UnitTest1
+namespace Todo.Domain.Tests
 {
-    [TestMethod]
-    public void TestMethod1()
+    [TestClass]
+    public class UnitTest1
     {
+        [TestMethod]
+        public void TestMethod1()
+        {
+        }
     }
 }
