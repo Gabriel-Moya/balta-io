@@ -1,5 +1,4 @@
 ﻿using Flunt.Notifications;
-
 using Todo.Domain.Commands;
 using Todo.Domain.Commands.Contracts;
 using Todo.Domain.Entities;
