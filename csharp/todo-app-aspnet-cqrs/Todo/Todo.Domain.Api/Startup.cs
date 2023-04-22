@@ -7,6 +7,7 @@ using Microsoft.Extensions.Hosting;
 
 using Todo.Domain.Handlers;
 using Todo.Domain.Infra.Contexts;
+using Todo.Domain.Infra.Repositories;
 using Todo.Domain.Repositories;
 
 namespace Todo.Domain.Api
