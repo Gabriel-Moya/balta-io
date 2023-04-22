@@ -53,7 +53,7 @@ namespace Todo.Domain.Infra.Repositories
         public TodoItem GetById(Guid id, string user)
         {
             return _context.Todos
-                .FirstOrDefault(x => x.Id == id && x.User == user);
+                .FirstOrDefault(TodoQueries.GetById(id, user));
         }
 
         public IEnumerable<TodoItem> GetByPeriod(string user, DateTime date, bool done)
