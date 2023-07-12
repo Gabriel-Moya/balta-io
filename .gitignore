@@ -13,3 +13,6 @@ x64/
 
 # Rider
 .idea/
+
+# Javascript
+node_modules/
