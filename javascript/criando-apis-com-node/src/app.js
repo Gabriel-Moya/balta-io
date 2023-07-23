@@ -12,6 +12,7 @@ dotenv.config();
 mongoose.connect(`${process.env.CONNECTION_STRING}`);
 
 const Product = require('./models/product');
+const Customer = require('./models/customer');
 
 const indexRoute = require('./routes/index-route');
 const productRoute = require('./routes/product-route');
