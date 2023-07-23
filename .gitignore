@@ -6,6 +6,7 @@ workspace.code-workspace
 *.suo
 *.vs/
 [Bb]in/
+!javascript/criando-apis-com-node/bin
 [Oo]bj/
 [Dd]ebug/
 [Rr]elease/
